@@ -1,5 +1,6 @@
 package org.example.storagebackend.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -7,67 +8,52 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-@TableName("sys_log")
-public class SysLog implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+@TableName("sys_notify")
+public class SysNotify {
     /**
-     * 日志记录ID
+     * 通知记录ID
      */
     @TableId(value = "id")
     private Long id;
 
     /**
-     * 操作用户ID
+     * 接收者ID
      */
     @TableField("user_id")
     private Long userId;
 
     /**
-     * 操作用户名称
+     * 发送者ID(0代表系统消息)
      */
-    @TableField("username")
-    private String username;
+    @TableField("sender_id")
+    private Long senderId;
 
     /**
-     * 功能模块: FILE/USER/SHARE/SYSTEM
+     * 通知标题
      */
-    @TableField("module")
-    private String module;
+    @TableField("title")
+    private String title;
 
     /**
-     * 操作类型: UPLOAD/DOWNLOAD/LOGIN/DELETE
-     */
-    @TableField("action")
-    private String action;
-
-    /**
-     * 请求路径
-     */
-    @TableField("request_uri")
-    private String requestUri;
-
-    /**
-     * 操作IP地址
-     */
-    @TableField("client_ip")
-    private String clientIp;
-
-    /**
-     * 操作状态:0-失败; 1-成功
-     */
-    @TableField("status")
-    private Integer status;
-
-    /**
-     * 操作详情
+     * 通知内容
      */
     @TableField("content")
     private String content;
+
+    /**
+     * 通知类型: 1-系统公告; 2-文件分享; 3-团队邀请
+     */
+    @TableField("notify_type")
+    private Integer notifyType;
+
+    /**
+     * 阅读状态: 0-未读; 1-已读
+     */
+    @TableField("status")
+    private Integer status;
 
     /**
      * 创建时间
