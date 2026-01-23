@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import lombok.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -21,6 +20,12 @@ public class FileRecycle implements Serializable {
      */
     @TableId(value = "id")
     private Long id;
+
+    /**
+     * 空间ID
+     */
+    @TableField("drive_id")
+    private Long driveId;
 
     /**
      * 用户ID
@@ -41,19 +46,25 @@ public class FileRecycle implements Serializable {
     private Long fileId;
 
     /**
+     * 父目录ID,根目录为0
+     */
+    @TableField("parent_id")
+    private Long parentId;
+
+    /**
      * 文件名称
      */
     @TableField("file_name")
     private String fileName;
 
     /**
-     * 文件路径
+     * 文件原路径
      */
-    @TableField("file_path")
-    private String filePath;
+    @TableField("original_path")
+    private String originalPath;
 
     /**
-     * 文件类型:0-文件; 1-文件夹
+     * 文件类型:1-文件; 2-文件夹
      */
     @TableField("file_type")
     private Integer fileType;
@@ -81,7 +92,7 @@ public class FileRecycle implements Serializable {
     private LocalDateTime expiredAt;
 
     /**
-     * 回收状态:0-未恢复; 1-已恢复; 2-已彻底删除
+     * 回收状态:1-待恢复; 2-已恢复; 3-已彻底删除
      */
     @TableField("status")
     private Integer status;

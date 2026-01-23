@@ -34,16 +34,16 @@ public class FileAcl implements Serializable {
     private Long subjectId;
 
     /**
-     * 主体类型:0-USER; 1-NODE; 2-ROLE
+     * 主体类型:1-用户; 2-角色; 3-组织节点
      */
     @TableField("subject_type")
     private Integer subjectType;
 
     /**
-     * 授权行为:0-拒绝;1-允许
+     * 授权类型:1-允许; 2-拒绝
      */
-    @TableField("is_allow")
-    private Integer isAllow;
+    @TableField("grant_type")
+    private Integer grantType;
 
     /**
      * 权限唯一标识

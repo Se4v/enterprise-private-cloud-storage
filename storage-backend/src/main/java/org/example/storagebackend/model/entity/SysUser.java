@@ -34,10 +34,16 @@ public class SysUser implements Serializable {
     private String password;
 
     /**
+     * 头像
+     */
+    @TableField("avatar")
+    private String avatar;
+
+    /**
      * 真实姓名
      */
-    @TableField("full_name")
-    private String fullName;
+    @TableField("real_name")
+    private String realName;
 
     /**
      * 手机号

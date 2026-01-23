@@ -34,7 +34,7 @@ public class SysPerm implements Serializable {
     private String permCode;
 
     /**
-     * 权限类型:0-菜单权限; 1-操作权限; 2-数据权限
+     * 权限类型:1-菜单权限; 2-操作权限; 3-数据权限
      */
     @TableField("perm_type")
     private Integer permType;

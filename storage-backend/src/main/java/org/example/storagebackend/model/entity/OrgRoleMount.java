@@ -34,10 +34,10 @@ public class OrgRoleMount implements Serializable {
     private Long nodeId;
 
     /**
-     * 权限继承:0-仅当前节点;1-包含子节点
+     * 挂载范围:0-仅当前节点;1-包含子节点
      */
-    @TableField("is_inherit")
-    private Integer isInherit;
+    @TableField("mount_scope")
+    private Integer mountScope;
 
     /**
      * 创建时间

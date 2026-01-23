@@ -46,22 +46,16 @@ public class FileLogical implements Serializable {
     private Long physicalFileId;
 
     /**
-     * 文件路径
-     */
-    @TableField("file_path")
-    private String filePath;
-
-    /**
      * 文件/目录名称
      */
     @TableField("file_name")
     private String fileName;
 
     /**
-     * 是否文件夹:0-否;1-是
+     * 文件类型:1-文件; 2-文件夹
      */
-    @TableField("is_folder")
-    private Integer isFolder;
+    @TableField("file_type")
+    private Integer fileType;
 
     /**
      * 文件大小(字节)

@@ -22,10 +22,10 @@ public class FileShare implements Serializable {
     private Long id;
 
     /**
-     * 分享批次ID
+     * 空间ID
      */
-    @TableField("batch_id")
-    private Long batchId;
+    @TableField("drive_id")
+    private Long driveId;
 
     /**
      * 文件/文件夹ID
@@ -34,7 +34,7 @@ public class FileShare implements Serializable {
     private Long fileId;
 
     /**
-     * 文件类型:0-文件; 1-文件夹
+     * 文件类型:1-文件; 2-文件夹
      */
     @TableField("file_type")
     private Integer fileType;
@@ -58,7 +58,7 @@ public class FileShare implements Serializable {
     private String accessCode;
 
     /**
-     * 分享类型:0-加密链接; 1-公开链接
+     * 分享类型:1-加密链接; 2-公开链接
      */
     @TableField("share_type")
     private Integer shareType;

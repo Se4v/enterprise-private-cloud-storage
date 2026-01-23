@@ -28,7 +28,7 @@ public class FileDrive implements Serializable {
     private String driveName;
 
     /**
-     * 空间类型:0-公司; 1-部门; 2-团队; 3-个人
+     * 空间类型:1-公司; 2-部门; 3-团队; 4-个人
      */
     @TableField("drive_type")
     private Integer driveType;

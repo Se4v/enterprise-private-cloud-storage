@@ -36,8 +36,8 @@ public class FilePhysical implements Serializable {
     /**
      * 文件大小(字节)
      */
-    @TableField("size_bytes")
-    private Long sizeBytes;
+    @TableField("file_size")
+    private Long fileSize;
 
     /**
      * 文件唯一标识
@@ -46,16 +46,16 @@ public class FilePhysical implements Serializable {
     private String fileHash;
 
     /**
-     * 存储桶(MinIO Bucket)
+     * MinIO Bucket
      */
     @TableField("storage_bucket")
     private String storageBucket;
 
     /**
-     * 存储键(MinIO ObjectKey)
+     * MinIO ObjectKey
      */
-    @TableField("storage_key")
-    private String storageKey;
+    @TableField("object_key")
+    private String objectKey;
 
     /**
      * 引用计数:有多少个逻辑文件指向我

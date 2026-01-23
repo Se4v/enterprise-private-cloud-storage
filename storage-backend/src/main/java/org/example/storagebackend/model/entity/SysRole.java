@@ -34,7 +34,7 @@ public class SysRole implements Serializable {
     private String roleCode;
 
     /**
-     * 角色类型:0-全局角色; 1-组织内角色,挂载到节点
+     * 角色类型:1-全局角色; 2-组织内角色,挂载到节点
      */
     @TableField("role_type")
     private Integer roleType;

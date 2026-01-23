@@ -40,10 +40,10 @@ public class OrgNode implements Serializable {
     private Integer nodeType;
 
     /**
-     * 关联实体ID(用户ID)
+     * 绑定的用户ID
      */
-    @TableField("ref_id")
-    private Long refId;
+    @TableField("bind_id")
+    private Long bindId;
 
     /**
      * 节点状态:0-禁用; 1-启用

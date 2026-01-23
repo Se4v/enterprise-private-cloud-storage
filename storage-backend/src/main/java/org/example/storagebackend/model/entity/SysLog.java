@@ -34,7 +34,7 @@ public class SysLog implements Serializable {
     private String username;
 
     /**
-     * 操作类型:0-登录; 1-登出; 2-上传; 3-下载; 4-删除; 5-重命名; 6-移动; 7-分享
+     * 操作类型:1-登录; 2-登出; 3-上传; 4-下载; 5-删除; 6-重命名; 7-移动; 8-分享
      */
     @TableField("type")
     private Integer type;
