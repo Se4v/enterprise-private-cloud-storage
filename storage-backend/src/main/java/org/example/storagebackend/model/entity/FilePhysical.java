@@ -64,6 +64,12 @@ public class FilePhysical implements Serializable {
     private Integer refCount;
 
     /**
+     * 文件状态:0-禁用; 1-启用
+     */
+    @TableField("status")
+    private Integer status;
+
+    /**
      * 首次上传时间
      */
     @TableField("created_at")

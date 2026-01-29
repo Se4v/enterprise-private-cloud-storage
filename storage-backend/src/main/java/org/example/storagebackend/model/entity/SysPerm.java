@@ -46,24 +46,4 @@ public class SysPerm implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;
-
-    /**
-     * 创建者ID
-     */
-    @TableField("creator_id")
-    private Long creatorId;
-
-    /**
-     * 更新时间
-     */
-    @TableField("updated_at")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime updatedAt;
-
-    /**
-     * 更新者ID
-     */
-    @TableField("updater_id")
-    private Long updaterId;
 }

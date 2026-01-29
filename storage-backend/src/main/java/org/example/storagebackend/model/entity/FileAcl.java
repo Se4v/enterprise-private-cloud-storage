@@ -46,6 +46,12 @@ public class FileAcl implements Serializable {
     private Integer grantType;
 
     /**
+     * 授权范围:1-包含子节点; 2-仅当前文件/文件夹
+     */
+    @TableField("grant_scope")
+    private Integer grantScope;
+
+    /**
      * 权限唯一标识
      */
     @TableField("permission")
