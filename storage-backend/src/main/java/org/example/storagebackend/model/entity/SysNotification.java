@@ -11,8 +11,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDateTime;
 
 @Data
-@TableName("sys_notify")
-public class SysNotify {
+@TableName("sys_notification")
+public class SysNotification {
     /**
      * 通知记录ID
      */
@@ -46,8 +46,8 @@ public class SysNotify {
     /**
      * 通知类型: 1-系统公告; 2-文件分享; 3-团队邀请
      */
-    @TableField("notify_type")
-    private Integer notifyType;
+    @TableField("notification_type")
+    private Integer notificationType;
 
     /**
      * 阅读状态: 0-未读; 1-已读
