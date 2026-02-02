@@ -36,12 +36,13 @@ minio:
   endpoint: http://127.0.0.1:9000
   access-key: minioadmin
   secret-key: minioadmin
+  bucket-name: cloud-storage
   secure: false
-  bucket:
-    core: enterprise-cloud-storage
-    temp: enterprise-temp-storage
-    backup: enterprise-backup-storage
 
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
+
+jwt:
+  secret-key:
+  expiration:
