@@ -16,7 +16,7 @@ public class SysNotification {
     /**
      * 通知记录ID
      */
-    @TableId(value = "id")
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
     /**

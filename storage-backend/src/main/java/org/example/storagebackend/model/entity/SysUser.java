@@ -1,5 +1,6 @@
 package org.example.storagebackend.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -18,7 +19,7 @@ public class SysUser implements Serializable {
     /**
      * 用户ID
      */
-    @TableId(value = "id")
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
